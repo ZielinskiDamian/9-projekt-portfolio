@@ -12,6 +12,11 @@ hr {
 	border: 1px solid #887bff;
 	border-bottom: 0;
 }
+
+h2 {
+	text-align: center;
+	margin-bottom: 0;
+}
 .btn {
 	border: 1px solid #887bff;
 	text-decoration: none;
@@ -19,8 +24,11 @@ hr {
 	padding: 15px 20px;
 	cursor: pointer;
 	transition: all 0.4s;
+	display: inline-block;
+	background-color: transparent;
+	margin: 20 auto;
 }
-btn:hover {
+.btn:hover {
 	background-color: #887bff;
 	color: white;
 }
@@ -65,23 +73,149 @@ btn:hover {
 	margin: 0;
 	padding: 10px 0;
 	text-align: center;
-    
 }
 .main-menu ul .menu-item {
 	/* display: flex; */
 	display: inline-block;
-	margin: 0 10px;    
+	margin: 0 10px;
 }
 
 .main-menu ul .menu-item a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    padding: 14px 20px;
-    display: block;
-    transition: all .4s;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	padding: 14px 20px;
+	display: block;
+	transition: all 0.4s;
 }
 .main-menu ul .menu-item a:hover {
-    background-color: white;
-    color: #887bff;
+	background-color: white;
+	color: #887bff;
+}
+.about {
+	text-align: center;
+}
+
+.about img {
+	border-radius: 50%;
+}
+
+.about p {
+	max-width: 700px;
+	margin: 40px auto 30px auto;
+	color: #777;
+	line-height: 1.5;
+}
+
+.portolio {
+	background-color: whitesmoke;
+}
+.portfolio-wraper {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1100px;
+	margin: 40px auto 30px auto;
+}
+.portfolio-wraper .portolio-item {
+	flex-basis: 25%;
+	height: 200px;
+	position: relative;
+}
+.portfolio-wraper .portolio-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.portfolio-wraper .portolio-item h3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 123, 255, 0.8);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	line-height: 200px;
+	color: white;
+	font-weight: 300;
+	font-size: 3em;
+	opacity: 0;
+	transition: all 0.4s;
+}
+.portfolio-wraper .portolio-item h3:hover {
+	opacity: 1;
+}
+
+.contact form {
+	max-width: 700px;
+	margin: 40px auto 30px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.contact input[type='text'],
+.contact input[type='email'] {
+	flex-basis: 48%;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+.contact textarea {
+	flex-basis: 100%;
+	padding: 15px;
+	height: 200px;
+	margin-bottom: 15px;
+}
+.contact .btn {
+	flex-basis: 25%;
+	padding: 15px;
+	margin: 20px auto;
+	/* margin-bottom: 15px; */
+}
+.social-media {
+	text-align: center;
+	font-size: 2.5em;
+	/* color: #887bff; */
+}
+
+.social-media a {
+	margin: 10px;
+	transition: all 0.4s;
+}
+.social-media a:hover {
+	color: #777;
+}
+
+.main-footer {
+	background-color: rgb(238, 235, 229);
+	padding: 20px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		width: 992px;
+	}
+}
+@media (max-width: 992px) {
+	.container {
+		width: 768px;
+	}
+	.portfolio-wraper .portolio-item {
+		flex-basis: 50%;
+	}
+}
+@media (max-width: 768px) {
+	.container {
+		width: 95%;
+	}
+	.portfolio-wraper .portolio-item {
+		flex-basis: 100%;
+	}
+}
+@media (max-width: 480) {
+	.main-header .main-header-content h1{
+		font-size: 3em;
+	}
 }
